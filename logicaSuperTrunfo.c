@@ -23,7 +23,7 @@ int main() {
     // 
     // (Repita para cada propriedade)
      // Entrada dos dados da primeira cidade
-    printf("\nCadastro da primeira cidade:\n");
+    printf("\nCadastro da primeira carta:\n");
 
     printf("Represente seu Estado com 2 letras: ");
     scanf(" %s", estado1);
@@ -45,7 +45,7 @@ int main() {
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontos1);
     // Entrada dos dados da segunda cidade
-    printf("\nCadastro da segunda cidade:\n");
+    printf("\nCadastro da segunda carta:\n");
 
     printf("Estado: ");
     scanf(" %s", estado2);
@@ -103,29 +103,53 @@ int main() {
     printf("\nCarta 2: %s (%s) - Estado: %s\n", nome2, codigo2, estado2);
     printf("População: %d | Área: %.2f km² | PIB: %.2f bilhões | Pontos turísticos: %d\n", populacao2, area2, pib2, pontos2);
 
-    // Exibição dos valores das cartas antes de determinar o vencedor
+    
     printf("\nResultado da comparação:\n");
 
     if (opcao == 1) {
         printf("População:\n");
         printf("- %s: %d habitantes\n", nome1, populacao1);
         printf("- %s: %d habitantes\n", nome2, populacao2);
-        printf("Vencedora: %s\n", (populacao1 > populacao2) ? nome1 : nome2);
+        if (populacao1 > populacao2) {
+            printf("Vencedora: %s\n", nome1);
+        } else if (populacao2 > populacao1) {
+            printf("Vencedora: %s\n", nome2);
+        } else {
+            printf("Resultado: Empate!\n");
+        }
     } else if (opcao == 2) {
         printf("Área:\n");
         printf("- %s: %.2f km²\n", nome1, area1);
         printf("- %s: %.2f km²\n", nome2, area2);
-        printf("Vencedora: %s\n", (area1 > area2) ? nome1 : nome2);
+        if (area1 > area2) {
+            printf("Vencedora: %s\n", nome1);
+        } else if (area2 > area1) {
+            printf("Vencedora: %s\n", nome2);
+        } else {
+            printf("Resultado: Empate!\n");
+        }
     } else if (opcao == 3) {
         printf("PIB:\n");
         printf("- %s: %.2f bilhões\n", nome1, pib1);
         printf("- %s: %.2f bilhões\n", nome2, pib2);
-        printf("Vencedora: %s\n", (pib1 > pib2) ? nome1 : nome2);
+        if (pib1 > pib2) {
+            printf("Vencedora: %s\n", nome1);
+        } else if (pib2 > pib1) {
+            printf("Vencedora: %s\n", nome2);
+        } else {
+            printf("Resultado: Empate!\n");
+        }
     } else if (opcao == 4) {
         printf("Número de pontos turísticos:\n");
         printf("- %s: %d pontos turísticos\n", nome1, pontos1);
         printf("- %s: %d pontos turísticos\n", nome2, pontos2);
-        printf("Vencedora: %s\n", (pontos1 > pontos2) ? nome1 : nome2);
+        if (pontos1 > pontos2) {
+            printf("Vencedora: %s\n", nome1);
+        } else if (pontos2 > pontos1) {
+            printf("Vencedora: %s\n", nome2);
+        } else {
+            printf("Resultado: Empate!\n");
+        }
     } else {
         printf("Opção inválida!\n");
     }
