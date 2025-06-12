@@ -8,7 +8,9 @@
 int main() {
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
-
+ char estado1[50], estado2[50], nome1[50], nome2[50], codigo1[20], codigo2[20];
+    int populacao1, populacao2, pontos1, pontos2, opcao;
+    float area1, area2, pib1, pib2;
     
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -20,9 +22,61 @@ int main() {
     // scanf("%s", codigo);
     // 
     // (Repita para cada propriedade)
+     // Entrada dos dados da primeira cidade
+    printf("\nCadastro da primeira cidade:\n");
+
+    printf("Represente seu Estado com 2 letras: ");
+    scanf(" %s", estado1);
+
+    printf("Código da carta exemplo (01 a 05): ");
+    scanf(" %s", codigo1);
+
+    printf("Nome da cidade: ");
+    scanf(" %s[^\n]", nome1);
+
+    printf("População: ");
+    scanf("%d", &populacao1);
+     printf("Área (km²): ");
+    scanf("%f", &area1);
+    
+    printf("PIB (bilhões): ");
+    scanf("%f", &pib1);
+    
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &pontos1);
+    // Entrada dos dados da segunda cidade
+    printf("\nCadastro da segunda cidade:\n");
+
+    printf("Estado: ");
+    scanf(" %s", estado2);
+
+    printf("Código da carta: ");
+    scanf(" %s", codigo2);
+
+    printf("Nome da cidade: ");
+    scanf(" %s[^\n]", nome2);
+
+    printf("População: ");
+    scanf("%d", &populacao2);
+    
+    printf("Área (km²): ");
+    scanf("%f", &area2);
+    
+    printf("PIB (bilhões): ");
+    scanf("%f", &pib2);
+    
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &pontos2);
 
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
+     printf("\nEscolha o atributo a ser comparado:\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Número de Pontos Turísticos\n");
+    printf("Digite a opção desejada: ");
+    scanf("%d", &opcao);
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
 
     // Exemplo:
@@ -31,6 +85,8 @@ int main() {
     // } else {
     //     printf("Cidade 2 tem maior população.\n");
     // }
+    
+
 
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
@@ -38,6 +94,41 @@ int main() {
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+     // Exibição das cartas cadastradas
+    printf("\nDados das cartas cadastradas:\n");
+
+    printf("\nCarta 1: %s (%s) - Estado: %s\n", nome1, codigo1, estado1);
+    printf("População: %d | Área: %.2f km² | PIB: %.2f bilhões | Pontos turísticos: %d\n", populacao1, area1, pib1, pontos1);
+    
+    printf("\nCarta 2: %s (%s) - Estado: %s\n", nome2, codigo2, estado2);
+    printf("População: %d | Área: %.2f km² | PIB: %.2f bilhões | Pontos turísticos: %d\n", populacao2, area2, pib2, pontos2);
+
+    // Exibição dos valores das cartas antes de determinar o vencedor
+    printf("\nResultado da comparação:\n");
+
+    if (opcao == 1) {
+        printf("População:\n");
+        printf("- %s: %d habitantes\n", nome1, populacao1);
+        printf("- %s: %d habitantes\n", nome2, populacao2);
+        printf("Vencedora: %s\n", (populacao1 > populacao2) ? nome1 : nome2);
+    } else if (opcao == 2) {
+        printf("Área:\n");
+        printf("- %s: %.2f km²\n", nome1, area1);
+        printf("- %s: %.2f km²\n", nome2, area2);
+        printf("Vencedora: %s\n", (area1 > area2) ? nome1 : nome2);
+    } else if (opcao == 3) {
+        printf("PIB:\n");
+        printf("- %s: %.2f bilhões\n", nome1, pib1);
+        printf("- %s: %.2f bilhões\n", nome2, pib2);
+        printf("Vencedora: %s\n", (pib1 > pib2) ? nome1 : nome2);
+    } else if (opcao == 4) {
+        printf("Número de pontos turísticos:\n");
+        printf("- %s: %d pontos turísticos\n", nome1, pontos1);
+        printf("- %s: %d pontos turísticos\n", nome2, pontos2);
+        printf("Vencedora: %s\n", (pontos1 > pontos2) ? nome1 : nome2);
+    } else {
+        printf("Opção inválida!\n");
+    }
 
     return 0;
 }
