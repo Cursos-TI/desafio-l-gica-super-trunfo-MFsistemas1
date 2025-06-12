@@ -32,7 +32,7 @@ int main() {
     scanf(" %s", codigo1);
 
     printf("Nome da cidade: ");
-    scanf(" %s[^\n]", nome1);
+    scanf(" %s[^\n]", nome1);// Captura nomes com espaços
 
     printf("População: ");
     scanf("%d", &populacao1);
@@ -54,7 +54,7 @@ int main() {
     scanf(" %s", codigo2);
 
     printf("Nome da cidade: ");
-    scanf(" %s[^\n]", nome2);
+    scanf(" %s[^\n]", nome2);// Captura nomes com espaços
 
     printf("População: ");
     scanf("%d", &populacao2);
