@@ -85,28 +85,7 @@ int main() {
     // } else {
     //     printf("Cidade 2 tem maior população.\n");
     // }
-    
-
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-     // Exibição das cartas cadastradas
-    printf("\nDados das cartas cadastradas:\n");
-
-    printf("\nCarta 1: %s (%s) - Estado: %s\n", nome1, codigo1, estado1);
-    printf("População: %d | Área: %.2f km² | PIB: %.2f bilhões | Pontos turísticos: %d\n", populacao1, area1, pib1, pontos1);
-    
-    printf("\nCarta 2: %s (%s) - Estado: %s\n", nome2, codigo2, estado2);
-    printf("População: %d | Área: %.2f km² | PIB: %.2f bilhões | Pontos turísticos: %d\n", populacao2, area2, pib2, pontos2);
-
-    
-    printf("\nResultado da comparação:\n");
-
-    if (opcao == 1) {
+     if (opcao == 1) {
         printf("População:\n");
         printf("- %s: %d habitantes\n", nome1, populacao1);
         printf("- %s: %d habitantes\n", nome2, populacao2);
@@ -154,5 +133,25 @@ int main() {
         printf("Opção inválida!\n");
     }
 
+
+
+    // Exibição dos Resultados:
+    // Após realizar as comparações, exiba os resultados para o usuário.
+    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+
+    // Exemplo:
+    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+
+      printf("\nDados das cartas cadastradas:\n");
+
+    printf("\nCarta 1: %s (%s) - Estado: %s\n", nome1, codigo1, estado1);
+    printf("População: %d | Área: %.2f km² | PIB: %.2f bilhões | Pontos turísticos: %d\n", populacao1, area1, pib1, pontos1);
+    
+    printf("\nCarta 2: %s (%s) - Estado: %s\n", nome2, codigo2, estado2);
+    printf("População: %d | Área: %.2f km² | PIB: %.2f bilhões | Pontos turísticos: %d\n", populacao2, area2, pib2, pontos2);
+    printf("\nResultado da comparação.\n");  
+    
+
+   
     return 0;
 }
